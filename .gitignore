@@ -2,4 +2,5 @@
 books/
 
 #ignore python cache directory
-__pythoncache__/*
+__pycache__/
+
