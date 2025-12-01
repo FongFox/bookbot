@@ -1,5 +1,5 @@
 def get_book_text(file_path):
-    with open(file_path, encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8-sig") as f:
         # f is a file object
         file_contents = f.read()
     f.closed
@@ -7,10 +7,17 @@ def get_book_text(file_path):
     return file_contents
 
 
+def count_words(content):
+    words = content.split()
+
+    return len(words)
+
+
 def main():
     book_contents = get_book_text("books/frankenstein.txt")
-    print(book_contents)
-    pass
+    num_words = count_words(book_contents)
+
+    print(f"Found {num_words} total words")
 
 
 # Using the special variable
