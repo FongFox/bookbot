@@ -1,2 +1,5 @@
 # ignore books directory
 books/
+
+#ignore python cache directory
+__pythoncache__/*
